@@ -1,0 +1,919 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>146/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed May 24 16:56:41 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>2856 seconds (2856959 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage Forms", "Optional[OpenMRS Home Page]"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=113.0.5672.127)
+Build info: version: &apos;4.8.2&apos;, revision: &apos;826dbfc730&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80c62d000c9d7bc61ebd13d1b7483f79, get {url=https://demo.openmrs.org/openmrs/login.htm}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Saranaya\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56198}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56198/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80c62d000c9d7bc61ebd13d1b7483f79
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
+	at hooks.hook.beforescenario(hook.java:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1903221272", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1903221272'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=113.0.5672.127)
+Build info: version: &apos;4.8.2&apos;, revision: &apos;826dbfc730&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80c62d000c9d7bc61ebd13d1b7483f79, get {url=https://demo.openmrs.org/openmrs/login.htm}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Saranaya\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56198}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56198/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80c62d000c9d7bc61ebd13d1b7483f79
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
+	at hooks.hook.beforescenario(hook.java:18)
+</pre></div></td>
+<td>1</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient medical information", "Optional[OpenMRS Home Page]"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from no such execution context: uniqueContextId not found
+  (Session info: chrome=113.0.5672.127) 
+Host info: host: &apos;LAPTOP-KAPRIBPB&apos;, ip: &apos;192.168.0.63&apos;
+Build info: version: &apos;4.8.2&apos;, revision: &apos;826dbfc730&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:52)
+	at hooks.hook.beforescenario(hook.java:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace203134694", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace203134694'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from no such execution context: uniqueContextId not found
+  (Session info: chrome=113.0.5672.127) 
+Host info: host: &apos;LAPTOP-KAPRIBPB&apos;, ip: &apos;192.168.0.63&apos;
+Build info: version: &apos;4.8.2&apos;, revision: &apos;826dbfc730&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:52)
+	at hooks.hook.beforescenario(hook.java:17)
+</pre></div></td>
+<td>1</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add new Encounter Role", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>24</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify the links presented in Appointment scheduling page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify locations sessions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Capture vitals page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage the Encounter type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage Forms", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the FP search box", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "FP Table coloumn count", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify locations sessions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Find Patient record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Style Guide", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Location of session", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>12</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Find Patient record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Merge Patient Electronic Records", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>26</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Active Visis search box (Using Name)", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>24</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Change password settings", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>25</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Variable", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Find Patient record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage Forms", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Daily Appointments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>23</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Roles and Privileges", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Service Types", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient medical information", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>29</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validation of Location for this session", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>12</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Global Properties", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Accounts", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>11</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Register Patient page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>23</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unidentified patient registration", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>34</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient Demographics registeration", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>33</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage the Encounter type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Location of session", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>26</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify locations sessions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validation of Location for this session", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the FP search box", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage Forms", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Extensions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Style Guide", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Variable", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify the links presented in Appointment scheduling page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage the Encounter type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Appointments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Style Guide", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify required field in Gender registration", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>26</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login should be fail(Invalid Credentials)", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>11</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login should be fail(Invalid Location for this session)", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>11</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login should be fail(Invalid Credentials)", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>13</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "My language settings", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage the Encounter type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Service Types", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient medical information", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>24</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login should be successfull", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>23</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Active Visis search box (Using Ids)", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "My account Page", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Active Visit Table coloumn count", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validation of Location for this session", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify required field in name registration", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>29</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "My language settings", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify the links presented in Appointment scheduling page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Extensions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validation of Location for this session", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>11</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify with wrong credential in search box", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "My language settings", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Reports page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Location of session", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify required field in DOB registration", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>26</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient medical information", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>40</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify with wrong credential in search box", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Find Patient record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Configure MetaData", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "My language settings", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient medical information", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>25</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validation of Location for this session", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage APP", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Provider Schedules", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Extensions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add the Encounter type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>23</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage the Encounter type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the patient full details", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>35</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify locations sessions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify the links presented in Appointment scheduling page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient identifier type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify the links presented in Appointment scheduling page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Find patient page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Location of session", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>12</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient identifier type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reports page header verification", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify locations sessions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validation of Location for this session", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>11</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Appointment scheduling page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>13</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Active Visis search box (Using Name)", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>16</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User should Logut Successfull", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Global Properties", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage Forms", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Global Properties", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>24</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient identifier type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the patient full details", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>20</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Active Visis search box (Using Ids)", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Service Types", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify configuration count", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient medical information", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>34</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login should be fail(Invalid Credentials)", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>10</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify locations sessions", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Manage the Encounter type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>23</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Variable", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>22</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Appointment Requests", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "My language settings", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>17</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Location of session", "Optional[OpenMRS Header Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Active Visit page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>24</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify with wrong credential in search box", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Base Style Fragments", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>24</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that patient Ids and names available on table header", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>13</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient medical information", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>26</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Find Patient record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient medical information", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>27</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to System Administration page", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>26</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the FP search box", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Record", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>21</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User not possible to Login", "Optional[OpenMRS Login Page]"</td>
+<td></td>
+<td>11</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Manage Service Types", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>15</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Capture vitals Table coloumn count", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>14</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify patient identifier type", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>18</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Advanced Administration Services", "Optional[OpenMRS Home Page]"</td>
+<td></td>
+<td>19</td>
+<td>Runner.TestRunner@1c7696c6</td></tr>
+</table><p>
+</body>
+</html>
